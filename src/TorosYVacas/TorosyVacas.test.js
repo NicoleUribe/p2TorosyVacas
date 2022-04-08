@@ -45,9 +45,19 @@ describe("TorosyVacas", () => {
         expect(tyv.todosLosToros(1234,5678)).toEqual("sin coincidencias");
      });
 
-     it("9. determinar todas coincidencias encualquier lugar de la cadena y devolver vaca", () => {
+     it("9. determinar todas coincidencias en cualquier lugar de la cadena y devolver vaca", () => {
         expect(tyv.todasLasVacas(12,21)).toEqual("**");
         expect(tyv.todasLasVacas(34,78)).toEqual("sin coincidencias");
+      });
+
+      it("10. determinar algunas coincidencias en cualquier lugar de la cadena y devolver vaca", () => {
+        expect(tyv.todasLasVacas(1245,2167)).toEqual("**");
+        expect(tyv.todasLasVacas(3445,7876)).toEqual("sin coincidencias");
+      });
+
+      it("11. determinar coincidencias del mismo numero", () => {
+        expect(tyv.todasLasVacas(5225,2167)).toEqual("**");
+        expect(tyv.todasLasVacas(3445,7876)).toEqual("sin coincidencias");
       });
 
 });
