@@ -27,7 +27,12 @@ class Parametros{
             for(var cont2=0;this.tamano(res)!=cont2 ; cont2++){
                 if(clave[cont]==res[cont2])res1=true; 
              } 
-             if(!res1)res=res+clave[cont];
+             if(!res1){
+                res=res+clave[cont];
+             }
+             else{
+                 res=res+".";
+             }
         }
         return res;
     }

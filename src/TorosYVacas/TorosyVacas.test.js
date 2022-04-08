@@ -52,7 +52,7 @@ describe("TorosyVacas", () => {
     });
 
     it("11. detectar coincidencias en una cadena para evitar vacas extras", () => {
-        expect(tyv.repetidos("5225")).toEqual("52");
+        expect(tyv.repetidos("5225")).toEqual("52..");
     });
 
     it("12. determinar algunas coincidencias en cadenas con numeros repetidos", () => {
