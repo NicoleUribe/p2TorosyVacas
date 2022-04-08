@@ -59,8 +59,12 @@ describe("TorosyVacas", () => {
         expect(tyv.todasLasVacas(5225,4352)).toEqual("**");
     });
 
-    it("13. Que devuelva 'sin coincidencias' si no hay ni vacas ", () => {
+    it("13. Que devuelva 'sin coincidencias' si no hay ninguna vacas ", () => {
         expect(tyv.todasLasVacas(3445,7876)).toEqual("sin coincidencias");
+    });
+
+    it("14. Que devuelva 'sin coincidencias' si no hay ningun toro ", () => {
+        expect(tyv.todosLosToros(3445,7876)).toEqual("sin coincidencias");
     });
 
 
