@@ -67,5 +67,9 @@ describe("TorosyVacas", () => {
         expect(tyv.todosLosToros(3445,7876)).toEqual("sin coincidencias");
     });
 
+    
+    it("15. Que diferencie vacas de toros",()=>{
+        expect(tyv.todasLasVacas(3445,3876)).toEqual("sin coincidencias");
+    });
 
 });

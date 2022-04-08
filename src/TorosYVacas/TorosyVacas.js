@@ -52,7 +52,7 @@ class TorosyVacas{
     }
 
     vaca(clave1,clave2,res,cont,cont2){
-        if(clave1[cont2]==clave2[cont])res=res+"*";
+        if(clave1[cont2]==clave2[cont] && cont!=cont2)res=res+"*";
         return res;
     }
     repetidos(clave){
