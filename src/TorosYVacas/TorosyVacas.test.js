@@ -36,8 +36,8 @@ describe("TorosyVacas", () => {
     const tyv = new TorosyVacas();
   
     it("7.detectar cadenas iguales con toros", () => {
-        expect(tyv.todosLosToros(12345,12345)).toEqual("!!!!!");
-        expect(tyv.todosLosToros(1234,5678)).toEqual("sin coincidencias");
+        expect(tyv.todosLosToros(1,1)).toEqual("!");
+        expect(tyv.todosLosToros(1,5)).toEqual("sin coincidencias");
       });
 
 });
