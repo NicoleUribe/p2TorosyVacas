@@ -59,5 +59,9 @@ describe("TorosyVacas", () => {
         expect(tyv.repetidos("5225")).toEqual("52");
     });
 
+    it("12. determinar algunas coincidencias en cadenas con numeros repetidos", () => {
+        expect(tyv.todasLasVacas(5225,4352)).toEqual("**");
+    });
+
 
 });
