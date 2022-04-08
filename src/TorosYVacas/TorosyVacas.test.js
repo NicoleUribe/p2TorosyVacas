@@ -1,4 +1,5 @@
 import Parametros from "./Parametros.js";
+import TorosyVacas from "./TorosyVacas.js";
 describe("Parametros", () => {
     const p = new Parametros();
   
@@ -35,8 +36,8 @@ describe("TorosyVacas", () => {
     const tyv = new TorosyVacas();
   
     it("7.detectar cadenas iguales con toros", () => {
-        expect(tv.todosLosToros(12345,12345)).toEqual("!!!!!");
-        expect(tv.todosLosToros(1234,5678)).toEqual("sin coincidencias");
+        expect(tyv.todosLosToros(12345,12345)).toEqual("!!!!!");
+        expect(tyv.todosLosToros(1234,5678)).toEqual("sin coincidencias");
       });
 
 });

@@ -1,3 +1,6 @@
+import Parametros from "./Parametros.js";
+const p= new Parametros();
+
 class TorosyVacas{
     todosLosToros(clave1,clave2){
         var res= this.toros(clave1,clave2);
@@ -19,6 +22,10 @@ class TorosyVacas{
         if(clave1[cont]==clave2[cont]) res=res+"!"; 
         return res;
        }
+
+       transformar(cl){
+        return p.insertar(cl);
+    }
 }
 
 export default TorosyVacas;
