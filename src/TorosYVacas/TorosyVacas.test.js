@@ -31,3 +31,12 @@ describe("Parametros", () => {
 
 
 });
+describe("TorosyVacas", () => {
+    const tyv = new TorosyVacas();
+  
+    it("7.detectar cadenas iguales con toros", () => {
+        expect(tv.todosLosToros(12345,12345)).toEqual("!!!!!");
+        expect(tv.todosLosToros(1234,5678)).toEqual("sin coincidencias");
+      });
+
+});
