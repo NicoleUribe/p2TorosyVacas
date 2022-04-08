@@ -1,6 +1,34 @@
 <html>
+  <head>
+    <title>Toros y Vacas</title>
+  </head>
   <body>
-    <h1>Sumador</h1>
+    <h1>Toros y Vacas</h1>
+    <form id="torosyvacas-form">
+      <label for="clave1">Codigo secreto:</label>
+      <input type="string" id="clave1" /><br>
+      <label for="longitud">Cantidad de caracteres </label>
+      <select id="longitud">
+        <option value= 4>4</option>
+        <option value=5>5</option>
+        <option value=6>6</option>
+        <option value=7>7</option>
+        <option value=8>8</option>
+      </select><br>
+      <button id="Iniciar">Iniciar</button><br>
+      <label for="clave2">Intento</label>
+      <input type="string" id="clave2" />
+      <input type="submit" value="Adivinar" />
+    </form>
+    <div id="resultado-div"></div>
+
+    <script type="module" src="./src/presenter.js"></script>
+  </body>
+</html>
+
+<html>
+  <body>
+    <h1>Toros y Vacas</h1>
     <form id="sumar-form">
       <label for="primer-numero">Primer número:</label>
       <input type="number" id="primer-numero" />

@@ -1,5 +1,6 @@
 import Parametros from "./Parametros.js";
 import TorosyVacas from "./TorosyVacas.js";
+import Juego from "./Juego.js";
 describe("Parametros", () => {
     const p = new Parametros();
   
@@ -67,9 +68,26 @@ describe("TorosyVacas", () => {
         expect(tyv.todosLosToros(3445,7876)).toEqual("sin coincidencias");
     });
 
-    
     it("15. Que diferencie vacas de toros",()=>{
         expect(tyv.todasLasVacas(3445,3876)).toEqual("sin coincidencias");
     });
 
+    it("15. Que diferencie vacas de toros con repetidos",()=>{
+        expect(tyv.todasLasVacas(3345,8376)).toEqual("*");
+    });
+
+    it("16. Que identifique vacas y toros en la misma clave",()=>{
+        expect(tyv.todaLaClave(2134,1234)).toEqual("!!**");
+    });
+
+
+});
+
+describe("Juego", () => {
+    const juego = new Juego();
+  
+    it("7.detectar cadenas iguales con toros", () => {
+        expect(tyv.todosLosToros(1,1)).toEqual("!");
+    });
+    
 });

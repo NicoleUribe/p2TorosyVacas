@@ -59,6 +59,13 @@ class TorosyVacas{
         var newClave=this.transformar(clave);
         return p.repetido(newClave);
     }
+
+    todaLaClave(clave1,clave2){
+        var res;
+        res=this.todosLosToros(clave1,clave2);
+        res=res+this.todasLasVacas(clave1,clave2);
+        return res;
+    }
 }
 
 export default TorosyVacas;
