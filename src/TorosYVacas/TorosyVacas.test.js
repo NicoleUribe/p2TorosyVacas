@@ -55,9 +55,8 @@ describe("TorosyVacas", () => {
         expect(tyv.todasLasVacas(3445,7876)).toEqual("sin coincidencias");
     });
 
-    it("11. determinar coincidencias del mismo numero", () => {
-        expect(tyv.todasLasVacas(5225,2167)).toEqual("**");
-        expect(tyv.todasLasVacas(3445,7876)).toEqual("sin coincidencias");
+    it("11. detectar coincidencias en una cadena para evitar vacas extras", () => {
+        expect(tyv.repetidos("5225")).toEqual("52");
     });
 
 
