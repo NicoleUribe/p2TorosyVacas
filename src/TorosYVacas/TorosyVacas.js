@@ -2,9 +2,14 @@ import Parametros from "./Parametros.js";
 const p= new Parametros();
 
 class TorosyVacas{
+    sinCoincidencias(res){
+        if(res=="")res="sin coincidencias";
+        return res;
+    }
+
     todosLosToros(clave1,clave2){
         var res= this.toros(clave1,clave2);
-        if(res=="")res="sin coincidencias";
+        res=this.sinCoincidencias(res);
         return res;
     } 
  
@@ -13,23 +18,24 @@ class TorosyVacas{
      var clave2=this.transformar(cl2);
      var res="";
      for(var cont=0; p.tamano(clave1)!= cont  ;cont++){
-        res=this.toro(clave1,clave2,cont,res);
+        if(this.toro(clave1,clave2,cont))res=res+"!";
      }
          return res;
     }
 
-    toro(clave1,clave2,cont,res){
-        if(clave1[cont]==clave2[cont]) res=res+"!"; 
+    toro(clave1,clave2,cont){
+        var res=false;
+        if(clave1[cont]==clave2[cont])  res=true;
         return res;
        }
-
-       transformar(cl){
+    
+    transformar(cl){
         return p.insertar(cl);
     }
 
     todasLasVacas(clave1,clave2){
         var res= this.vacas(clave1,clave2);
-        if(res=="")res="sin coincidencias";
+        res=this.sinCoincidencias(res);
         return res;
     } 
     
