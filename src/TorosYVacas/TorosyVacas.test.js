@@ -38,6 +38,11 @@ describe("TorosyVacas", () => {
     it("7.detectar cadenas iguales con toros", () => {
         expect(tyv.todosLosToros(1,1)).toEqual("!");
         expect(tyv.todosLosToros(1,5)).toEqual("sin coincidencias");
-      });
+    });
+    
+    it("7.detectar coincidencias identicas en una cadena y por cada una devuelve un toro", () => {
+        expect(tyv.todosLosToros(12345,12345)).toEqual("!!!!!");
+        expect(tyv.todosLosToros(1234,5678)).toEqual("sin coincidencias");
+     });
 
 });
