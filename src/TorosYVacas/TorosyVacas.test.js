@@ -24,5 +24,10 @@ describe("Parametros", () => {
         expect(p.longitud("1cb45",4)).toEqual(false);
     });
 
+    it("6.Que la clave no pase de la cantidad de caracteres ingresados", ()=>{
+        expect(p.longitud("1cb5674",7)).toEqual(true);
+        expect(p.longitud("1cb45",4)).toEqual(false);
+    });
+
 
 });
