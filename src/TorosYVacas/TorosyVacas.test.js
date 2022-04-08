@@ -14,5 +14,10 @@ describe("Parametros", () => {
         expect(p.insertar("1ab4")).toEqual("1ab4");
     });
 
+    it("4.Que no acepte simbolos", ()=>{
+        expect(p.validarCaracteres("1#b4")).toEqual(false);
+        expect(p.validarCaracteres("1cb4")).toEqual(true);
+    });
+
 
 });
