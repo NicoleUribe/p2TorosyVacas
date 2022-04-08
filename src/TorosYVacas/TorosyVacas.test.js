@@ -19,5 +19,10 @@ describe("Parametros", () => {
         expect(p.validarCaracteres("1cb4")).toEqual(true);
     });
 
+    it("5.Que la clave no pase los 4 caracteres", ()=>{
+        expect(p.longitud("1cb4",4)).toEqual(true);
+        expect(p.longitud("1cb45",4)).toEqual(false);
+    });
+
 
 });

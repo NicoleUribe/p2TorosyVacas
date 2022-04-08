@@ -9,6 +9,16 @@ class Parametros{
         return res;
     }
 
+    longitud(claves,long){
+        var res=false;
+        if( this.tamano(claves)== long) res = true;
+        return res;
+    }
+    
+    tamano(claves){
+        return this.insertar(claves).length;
+    }
+
 }
 
 export default Parametros;
