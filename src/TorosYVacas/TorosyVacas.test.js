@@ -60,16 +60,16 @@ describe("TorosyVacas", () => {
         expect(tyv.todasLasVacas(5225,4352)).toEqual("**");
     });
 
-    it("13. Que devuelva 'sin coincidencias' si no hay ninguna vacas ", () => {
-        expect(tyv.todasLasVacas(3445,7876)).toEqual("sin coincidencias");
+    it("13. Que devuelva '' si no hay ninguna vacas ", () => {
+        expect(tyv.todasLasVacas(3445,7876)).toEqual("");
     });
 
-    it("14. Que devuelva 'sin coincidencias' si no hay ningun toro ", () => {
-        expect(tyv.todosLosToros(3445,7876)).toEqual("sin coincidencias");
+    it("14. Que devuelva '' si no hay ningun toro ", () => {
+        expect(tyv.todosLosToros(3445,7876)).toEqual("");
     });
 
     it("15. Que diferencie vacas de toros",()=>{
-        expect(tyv.todasLasVacas(3445,3876)).toEqual("sin coincidencias");
+        expect(tyv.todasLasVacas(3445,3876)).toEqual("");
     });
 
     it("15. Que diferencie vacas de toros con repetidos",()=>{
@@ -79,15 +79,12 @@ describe("TorosyVacas", () => {
     it("16. Que identifique vacas y toros en la misma clave",()=>{
         expect(tyv.todaLaClave(2134,1234)).toEqual("!!**");
     });
-
-
+   
 });
-
 describe("Juego", () => {
-    const juego = new Juego();
+    const j = new Juego();
   
-    it("7.detectar cadenas iguales con toros", () => {
-        expect(tyv.todosLosToros(1,1)).toEqual("!");
+    it("17.Cmprobar que el juego completo funciona", () => {
+      expect(j.jugar(1234,4321,4)).toEqual("****");
     });
-    
 });
