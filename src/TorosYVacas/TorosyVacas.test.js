@@ -84,7 +84,11 @@ describe("TorosyVacas", () => {
 describe("Juego", () => {
     const j = new Juego();
   
-    it("17.Cmprobar que el juego completo funciona", () => {
-      expect(j.jugar(1234,4321,4)).toEqual("****");
+    it("17.Comprobar que el juego completo funciona", () => {
+        expect(j.jugar(1234,4321,4)).toEqual("****");
+    });
+
+    it("18.Que avise cuando una persona gana",()=>{
+        expect(j.jugar(1234,1234,4)).toEqual("GANASTE!!!");
     });
 });
