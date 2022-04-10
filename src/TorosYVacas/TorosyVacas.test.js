@@ -79,6 +79,14 @@ describe("TorosyVacas", () => {
     it("16. Que identifique vacas y toros en la misma clave",()=>{
         expect(tyv.todaLaClave(2134,1234)).toEqual("!!**");
     });
+
+    it("19.Que se avise si gano ",()=>{
+        expect(tyv.todaLaClave(1234,1234)).toEqual("GANASTE!!!");
+    });
+
+    it("20.Que muestre 'sin coincidencias' cuando las cadenas sean totalmente diferentes",()=>{
+        expect(tyv.todaLaClave(1234,5678)).toEqual("sin coincidencias");
+    });
    
 });
 describe("Juego", () => {
