@@ -19,8 +19,6 @@ jobs:
         run: npm ci
       - name: Run tests
         run: npm run test-once
-      - name: Build for deploy
-        run: npm run build
       - name: Deploy to GitHub Pages
         if: success()
         uses: crazy-max/ghaction-github-pages@v2
