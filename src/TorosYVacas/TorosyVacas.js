@@ -58,9 +58,9 @@ class TorosyVacas{
     }
     todaLaClave(clave1,clave2){
         var res;
-        res=this.todosLosToros(clave1,clave2);
-        res=res+this.todasLasVacas(clave1,clave2);
-        res=this.casosEspeciales(clave1,clave2,res);
+            res=this.todosLosToros(clave1,clave2);
+            res=res+this.todasLasVacas(clave1,clave2);
+            res=this.casosEspeciales(clave1,clave2,res);;
         return res;
     }
     casosEspeciales(clave1,clave2,res){

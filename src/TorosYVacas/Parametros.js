@@ -1,6 +1,8 @@
 class Parametros{
     insertar(clave){
-        return clave+"";
+        clave= clave+"";
+        return clave;
+
     }
 
     validarCaracteres(clave){
