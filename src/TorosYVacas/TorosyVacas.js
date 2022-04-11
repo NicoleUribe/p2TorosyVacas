@@ -14,8 +14,7 @@ class TorosyVacas{
     } 
 
     toros(cl1,cl2){
-     var clave1=this.transformar(cl1);
-     var clave2=this.transformar(cl2);
+     var clave1=this.transformar(cl1), clave2=this.transformar(cl2);
      var res="";
      for(var cont=0; p.tamano(clave1)!= cont  ;cont++){
         if(this.toro(clave1,clave2,cont))res=res+"!";
@@ -28,7 +27,7 @@ class TorosyVacas{
         if(clave1[cont]==clave2[cont])  res=true;
         return res;
        }
-       
+
     transformar(cl){
         return p.insertar(cl);
     }
@@ -61,9 +60,13 @@ class TorosyVacas{
         var res;
         res=this.todosLosToros(clave1,clave2);
         res=res+this.todasLasVacas(clave1,clave2);
+        res=this.casosEspeciales(clave1,clave2,res);
+        return res;
+    }
+    casosEspeciales(clave1,clave2,res){
         res=this.ganador(clave1,clave2,res);
         res=this.sinCoincidencias(res);
-        return res;
+        return res
     }
     ganador(clave1,clave2,res){
         var res;

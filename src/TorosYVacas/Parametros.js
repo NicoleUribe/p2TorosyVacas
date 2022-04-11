@@ -36,6 +36,8 @@ class Parametros{
         }
         return res;
     }
+
+
 }
 
 export default Parametros;
