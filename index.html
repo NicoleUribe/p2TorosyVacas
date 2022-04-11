@@ -18,7 +18,9 @@
       <label for="clave1">Codigo secreto:</label>
       <input type="password" id="clave1" minlength= "4"maxlength="10"/><br>
       <input type="button" id="Iniciar" value="Iniciar"onclick="mostrarBoton()"/><br>
-      <label for="clave2">Intento</label>
+      <label id="intentos">Intentos</label>
+      <label id="cont">0</label><br>
+      <label for="intento">Intento</label>
       <input type="string" id="clave2" /><br>
        <input type="submit" id="Adivinar" value="Adivinar" style="display: none;" onclick="rondas()" />
       <script>
@@ -29,7 +31,27 @@
           btn1.style.display ='none';
           btn2.style.display = "inline";
         }
+        var res=0;
+        function rondas(){
+          if(res<10){
+            ++res;
+            document.getElementById('cont').innerHTML = res;
+            if(clave1.value==clave2.value) res=0;
+          }
+          else{
+
+            var mensaje=window.confirm("el juego termino.La clave era "+clave1.value+" Quiere volver a jugar?" );
+            
+            if(mensaje){
+              document.getElementById('clave1').innerHTML=0;
+              document.getElementById('clave2').innerHTML=0;
+              document.getElementById('cont').innerHTML=0;
+              res=0;
+            }
+          }
+        }
       </script>
+
     </form>
     <div id="resultado-div"></div>
     <script type="module" src="./src/presenter.js"></script>

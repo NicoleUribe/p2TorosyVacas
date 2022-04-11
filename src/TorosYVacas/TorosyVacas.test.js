@@ -80,7 +80,7 @@ describe("TorosyVacas", () => {
         expect(tyv.todaLaClave(2134,1234)).toEqual("!!**");
     });
 
-    it("19.Que se avise si gano ",()=>{
+    it("19.Que se avise si gano",()=>{
         expect(tyv.todaLaClave(1234,1234)).toEqual("GANASTE!!!");
     });
 
@@ -98,5 +98,9 @@ describe("Juego", () => {
 
     it("18.Que avise cuando una persona gana",()=>{
         expect(j.jugar(1234,1234,4)).toEqual("GANASTE!!!");
+    });
+
+    it("21.Que se muestre 'el numero excede la cantidad de caracteres' si los caracteres son mas que los seleccionados",()=>{
+        expect(j.jugar(12345,12347,4)).toEqual("el numero excede la cantidad de caracteres");
     });
 });

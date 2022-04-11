@@ -1,8 +1,6 @@
-import Parametros from "./torosYVacas/Parametros.js";
-import TorosyVacas from "./torosYVacas/TorosyVacas.js";
+
 import Juego from "./torosYVacas/Juego.js";
-const p = new Parametros();
-const tyv = new TorosyVacas();
+
 const play = new Juego();
 
 const form = document.querySelector("#torosyvacas-form");
@@ -17,7 +15,9 @@ const long = document.querySelector("#longitud");
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
-     div.innerHTML=div.innerHTML+"<p>"+play.jugar(cl1.value,cl2.value,long.value)+"</p>";
- 
-});
+      div.innerHTML=div.innerHTML+"<p>"+play.jugar(cl1.value,cl2.value,long.value)+"</p>";
+     if(play.jugar(cl1.value,cl2.value,long.value)== "GANASTE!!!")
+     window.alert("¡ ¡ ¡ G  A  N  A  S  T  E ! ! ! ");
 
+});
+ 
