@@ -1,5 +1,5 @@
 
-import Juego from "./torosYVacas/Juego.js";
+import Juego from "./TorosYVacas/Juego.js";
 
 const play = new Juego();
 
