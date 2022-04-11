@@ -1,6 +1,7 @@
 import Parametros from "./Parametros.js";
 import TorosyVacas from "./TorosyVacas.js";
 import Juego from "./Juego.js";
+
 describe("Parametros", () => {
     const p = new Parametros();
   
