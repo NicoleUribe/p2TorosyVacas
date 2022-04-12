@@ -88,6 +88,7 @@ describe("TorosyVacas", () => {
     it("20.Que muestre 'sin coincidencias' cuando las cadenas sean totalmente diferentes",()=>{
         expect(tyv.todaLaClave(1234,5678)).toEqual("sin coincidencias");
     });
+
    
 });
 describe("Juego", () => {
@@ -106,4 +107,12 @@ describe("Juego", () => {
         expect(j.jugar(12345,12347,4)).toEqual("El numero tiene caracteres especiales o excede el tamaño, por favor intentelo de nuevo");
     });
 
+    describe("TorosyVacas", () => {
+        const tyv = new TorosyVacas();
+      
+        it("22.Que devuelva # si el numero difiere en 1", () => {
+            expect(tyv.ternera(1,2)).toEqual("#");
+       });
+    
+    });  
 });
