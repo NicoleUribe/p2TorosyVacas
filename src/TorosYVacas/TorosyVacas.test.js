@@ -111,18 +111,23 @@ describe("Juego", () => {
         const tyv = new TorosyVacas();
       
         it("22.Que devuelva # si el numero difiere en +1", () => {
-            expect(tyv.ternera(1,2)).toEqual("#");
+            expect(tyv.ternera(1,2,"",0,0)).toEqual("#");
        });
        
        it("23.Que devuelva # si el numero difiere en -1", () => {
-        expect(tyv.ternera(1,2)).toEqual("#");
+        expect(tyv.ternera(1,2,"",0,0)).toEqual("#");
 
          });
 
-        it("23.Que devuelva ' 'si el numero difiere en mad de 1 ", () => {
-            expect(tyv.ternera(1,8)).toEqual("");
+        it("24.Que devuelva ' 'si el numero difiere en mas de 1 ", () => {
+            expect(tyv.ternera(1,8,"",0,0)).toEqual("");
     
          });
+
+        it("25.Que devuelva '##'si el numero difiere en de alguno de los numeros difieren en 1 ", () => {
+            expect(tyv.todasLasTerneras(1234,5788)).toEqual("#");
+    
+         });    
     
     });  
 });

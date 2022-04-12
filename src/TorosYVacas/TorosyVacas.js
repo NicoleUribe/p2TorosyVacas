@@ -72,11 +72,20 @@ class TorosyVacas{
         if(clave1==clave2)res= "GANASTE!!!";
         return res;
     }
-    ternera(clave1,clave2){
-        var res="";
-        if(clave1=clave2+1 && clave1==clave2-1)res="#";
+    ternera(clave1,clave2,res,cont,cont2){
+        if(Number(clave1[cont2])==Number(clave2[cont])+1 &&Number(clave1[cont2])==Number(clave2[cont])-1)res=res+"#";
         return res;
-
+    }
+    todasLasTerneras(clave1,clave2){
+        clave1=this.repetidos(clave1);
+        var clave2=this.transformar(clave2);
+        var res="";
+        for(var cont=0;p.tamano(clave2)!= cont; cont++){
+            for(var cont2=0;p.tamano(clave1)!=cont2 ; cont2++){
+               res=this.ternera(clave1,clave2,res,cont,cont2); 
+            }
+        } 
+        return res;
     }
 }
 export default TorosyVacas;
