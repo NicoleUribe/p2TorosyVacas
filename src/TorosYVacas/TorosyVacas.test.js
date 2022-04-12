@@ -110,9 +110,15 @@ describe("Juego", () => {
     describe("TorosyVacas", () => {
         const tyv = new TorosyVacas();
       
-        it("22.Que devuelva # si el numero difiere en 1", () => {
+        it("22.Que devuelva # si el numero difiere en +1", () => {
             expect(tyv.ternera(1,2)).toEqual("#");
        });
+       
+       it("23.Que devuelva # si el numero difiere en -1", () => {
+        expect(tyv.ternera(1,2)).toEqual("#");
+   });
+
+
     
     });  
 });
