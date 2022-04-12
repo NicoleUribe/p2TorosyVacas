@@ -64,11 +64,11 @@ class TorosyVacas{
         return res;
     }
     casosEspeciales(clave1,clave2,res){
-        res=this.ganador(clave1,clave2,res);
+        res=this.ganador(clave1,clave2);
         res=this.sinCoincidencias(res);
         return res
     }
-    ganador(clave1,clave2,res){
+    ganador(clave1,clave2){
         var res;
         if(clave1==clave2)res= "GANASTE!!!";
         return res;

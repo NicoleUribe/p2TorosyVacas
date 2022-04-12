@@ -1,4 +1,3 @@
-
 import Juego from "./TorosYVacas/Juego.js";
 
 const play = new Juego();
