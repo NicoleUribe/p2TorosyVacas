@@ -29,7 +29,12 @@
 
         function mostrarBoton (){
           btn1.style.display ='none';
-          btn2.style.display = "inline";
+          btn2.style.display ="inline";
+        }
+
+        function volverAEmpezar(){
+          btn2.style.display="none";
+          btn1.style.display="inline";
         }
         var res=0;
         function rondas(){
@@ -43,10 +48,12 @@
             var mensaje=window.confirm("el juego termino.La clave era "+clave1.value+" Quiere volver a jugar?" );
             
             if(mensaje){
-              document.getElementById('clave1').innerHTML=0;
-              document.getElementById('clave2').innerHTML=0;
-              document.getElementById('cont').innerHTML=0;
+              document.getElementById('clave1').innerHTML="0";
+              document.getElementById('clave2').innerHTML="0";
+              document.getElementById('cont').innerHTML="0";
               res=0;
+              volverAEmpezar();
+              document.getElementById('resultado-div').innerHTML="<p>"+"********** O T R A   P A R T I D A **********"
             }
           }
         }

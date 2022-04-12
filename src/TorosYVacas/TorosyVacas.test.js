@@ -102,7 +102,7 @@ describe("Juego", () => {
         expect(j.jugar(1234,1234,4)).toEqual("GANASTE!!!");
     });
 
-    it("21.Que se muestre 'el numero excede la cantidad de caracteres' si los caracteres son mas que los seleccionados",()=>{
+    it("21.Que se muestre 'El numero tiene caracteres especiales o excede el tamaño, por favor intentelo de nuevo' si los caracteres son mas que los seleccionados",()=>{
         expect(j.jugar(12345,12347,4)).toEqual("El numero tiene caracteres especiales o excede el tamaño, por favor intentelo de nuevo");
     });
 
